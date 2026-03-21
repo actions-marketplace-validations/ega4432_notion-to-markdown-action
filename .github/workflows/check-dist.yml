@@ -44,7 +44,7 @@ jobs:
 
       # If index.js was different than expected, upload the expected version as an artifact
       # TODO: commit 時に `npm run package` をする必要があるのでそれを GitHub Actions で実行するようにする
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v7
         if: ${{ failure() && steps.diff.conclusion == 'failure' }}
         with:
           name: dist
